@@ -1,0 +1,130 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5;
+    overflow-x: hidden; /* Mencegah scroll horizontal saat animasi */
+}
+
+/* Animasi Muncul (Fade In) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Ramping */
+header {
+    background-color: #1a252f;
+    color: white;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+header ul li {
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Animasi saat ditekan */
+}
+
+header ul li:active {
+    background: #3498db;
+    transform: scale(0.9);
+}
+
+/* Konten dengan Animasi */
+.judul, .langkah-langkah, .komponen, .kesimpulan {
+    background: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    
+    /* Menerapkan animasi fadeInUp */
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+/* Memberikan delay agar muncul bergantian */
+.judul { animation-delay: 0.1s; }
+.langkah-langkah { animation-delay: 0.3s; }
+.komponen { animation-delay: 0.5s; }
+.kesimpulan { animation-delay: 0.7s; }
+
+h2 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+}
+
+p, li {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+/* Footer Center */
+footer {
+    background-color: #1a252f;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 0.85rem;
+    color: #bdc3c7;
+    margin: 0;
+}
+
+/* Interaksi Mobile */
+@media (hover: none) {
+    .judul:active {
+        transform: scale(0.98);
+        transition: 0.2s;
+    }
+}
+
+.logo {
+  width: 15%;
+  background-color: #3498db;
+  border-radius: 5px;
+  padding: 5px;
+}
